@@ -1,0 +1,49 @@
+[
+    {
+      "id": 1,
+      "name": "Joe's Coffee Shop",
+      "category": "coffee shop",
+      "address": "123 Main St, Springfield, IL, 62704",
+      "phone_number": "+1 217-555-1234",
+      "rating": 4.5,
+      "website": "https://www.joescoffee.com"
+    },
+    {
+      "id": 2,
+      "name": "Green Valley Grocery",
+      "category": "grocery store",
+      "address": "456 Elm St, Springfield, IL, 62701",
+      "phone_number": "+1 217-555-5678",
+      "rating": 4.3,
+      "website": "https://www.greenvalleygrocery.com"
+    },
+    {
+      "id": 3,
+      "name": "Springfield Fitness Center",
+      "category": "fitness center",
+      "address": "789 Oak St, Springfield, IL, 62711",
+      "phone_number": "+1 217-555-8765",
+      "rating": 4.7,
+      "website": "https://www.springfieldfitness.com"
+    },
+    {
+      "id": 4,
+      "name": "Tech Haven Electronics",
+      "category": "eletronics store",
+      "address": "101 Pine St, Springfield, IL, 62702",
+      "phone_number": "+1 217-555-3456",
+      "rating": 4.6,
+      "website": "https://www.techhaven.com"
+    },
+    {
+      "id": 5,
+      "name": "Luxe Nails Spa",
+      "category": "spa",
+      "address": "202 Cedar St, Springfield, IL, 62703",
+      "phone_number": "+1 217-555-6543",
+      "rating": 4.8,
+      "website": "https://www.luxenailsspa.com"
+    }
+  ]
+
+

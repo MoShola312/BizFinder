@@ -1,0 +1,68 @@
+[
+  {
+    "id": 1,
+    "name": "Tech Innovation Summit 2025",
+    "date": "2025-03-15",
+    "time": "09:00 AM",
+    "venue": {
+      "name": "Tech Hall",
+      "address": "123 Tech Avenue, Silicon Valley, CA",
+      "city": "Silicon Valley",
+      "state": "CA",
+      "country": "USA"
+    }
+  },
+  {
+    "id": 2,
+    "name": "Art & Design Expo",
+    "date": "2025-04-20",
+    "time": "10:00 AM",
+    "venue": {
+      "name": "Creative Arts Center",
+      "address": "456 Creative Blvd, New York, NY",
+      "city": "New York",
+      "state": "NY",
+      "country": "USA"
+    }
+  },
+  {
+    "id": 3,
+    "name": "Health and Wellness Fair",
+    "date": "2025-05-10",
+    "time": "11:00 AM",
+    "venue": {
+      "name": "Wellness Plaza",
+      "address": "789 Health Street, Austin, TX",
+      "city": "Austin",
+      "state": "TX",
+      "country": "USA"
+    }
+  },
+  {
+    "id": 4,
+    "name": "Global Business Conference",
+    "date": "2025-06-05",
+    "time": "08:30 AM",
+    "venue": {
+      "name": "International Business Hub",
+      "address": "321 Commerce Lane, Chicago, IL",
+      "city": "Chicago",
+      "state": "IL",
+      "country": "USA"
+    }
+  },
+  {
+    "id": 5,
+    "name": "Music and Culture Festival",
+    "date": "2025-07-22",
+    "time": "03:00 PM",
+    "venue": {
+      "name": "City Park Amphitheater",
+      "address": "654 Park Drive, Los Angeles, CA",
+      "city": "Los Angeles",
+      "state": "CA",
+      "country": "USA"
+    }
+  }
+]
+
