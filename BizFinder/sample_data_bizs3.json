@@ -1,10 +1,10 @@
-{
-  "results": [
+[
     {
       "name": "Central Perk",
       "place_id": "ChIJN1t_tDeuEmsRUsoyG83frY4",
       "address": "199 Lafayette St, New York, NY 10012",
       "rating": 4.5,
+      "phone_number": "+1 217-555-1234",
       "image_url": "https://example.com/central-perk.jpg",
       "geometry": {
         "location": {
@@ -17,7 +17,7 @@
         "periods": [
           {
             "open": {
-              "day": 0, // Sunday
+              "day": 0,
               "time": "0800"
             },
             "close": {
@@ -42,6 +42,7 @@
       "place_id": "ChIJN1t_tDeuEmsRUsoyG83frY5",
       "address": "3645 S Las Vegas Blvd, Las Vegas, NV 89109",
       "rating": 4.0,
+      "phone_number": "+1 217-555-1234",
       "image_url": "https://example.com/cheesecake-factory.jpg",
       "geometry": {
         "location": {
@@ -54,7 +55,7 @@
         "periods": [
           {
             "open": {
-              "day": 0, // Sunday
+              "day": 0, 
               "time": "1000"
             },
             "close": {
@@ -79,6 +80,7 @@
       "place_id": "ChIJN1t_tDeuEmsRUsoyG83frY6",
       "address": "86 Pike Pl, Seattle, WA 98101",
       "rating": 4.7,
+      "phone_number": "+1 217-555-1234",
       "image_url": "https://example.com/pike-place-fish.jpg",
       "geometry": {
         "location": {
@@ -91,7 +93,7 @@
         "periods": [
           {
             "open": {
-              "day": 1, // Monday
+              "day": 1,
               "time": "0900"
             },
             "close": {
@@ -116,7 +118,8 @@
       "place_id": "ChIJN1t_tDeuEmsRUsoyG83frY7",
       "address": "61 North Ave NW, Atlanta, GA 30308",
       "rating": 4.2,
-      "image_url": "https://example.com/the-varsity.jpg",
+      "phone_number": "+1 317-555-1294",
+      "image_url": "https://img.freepik.com/free-photo/restaurant-interior_1127-3392.jpg?semt=ais_hybrid",
       "geometry": {
         "location": {
           "latitude": 33.772,
@@ -128,7 +131,7 @@
         "periods": [
           {
             "open": {
-              "day": 0, // Sunday
+              "day": 0,
               "time": "1100"
             },
             "close": {
@@ -153,6 +156,7 @@
       "place_id": "ChIJN1t_tDeuEmsRUsoyG83frY8",
       "address": "1079 W Taylor St, Chicago, IL 60607",
       "rating": 4.3,
+      "phone_number": "+1 256-557-1563",
       "image_url": "https://example.com/als-italian-beef.jpg",
       "geometry": {
         "location": {
@@ -165,7 +169,7 @@
         "periods": [
           {
             "open": {
-              "day": 0, // Sunday
+              "day": 0,
               "time": "0900"
             },
             "close": {
@@ -190,6 +194,7 @@
       "place_id": "ChIJN1t_tDeuEmsRUsoyG83frY9",
       "address": "7000 Sunset Blvd, Los Angeles, CA 90028",
       "rating": 4.6,
+      "phone_number": "+1 917-423-1284",
       "image_url": "https://example.com/in-n-out-burger.jpg",
       "geometry": {
         "location": {
@@ -202,7 +207,7 @@
         "periods": [
           {
             "open": {
-              "day": 0, // Sunday
+              "day": 0,
               "time": "1030"
             },
             "close": {
@@ -227,6 +232,7 @@
       "place_id": "ChIJN1t_tDeuEmsRUsoyG83frY10",
       "address": "300 Webster St, Oakland, CA 94607",
       "rating": 4.4,
+      "phone_number": "+1 213-512-1888",
       "image_url": "https://example.com/blue-bottle-coffee.jpg",
       "geometry": {
         "location": {
@@ -239,7 +245,7 @@
         "periods": [
           {
             "open": {
-              "day": 1, // Monday
+              "day": 1, 
               "time": "0700"
             },
             "close": {
@@ -259,6 +265,4 @@
         ]
       }
     }
-  ],
-  "status": "OK"
-}
+  ]

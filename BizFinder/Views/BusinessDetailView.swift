@@ -6,42 +6,74 @@
 //
 
 import SwiftUI
+import MapKit
 
 struct BusinessDetailView: View {
     let business: Business
+    
+    @State var position: MapCameraPosition
+    
     var body: some View {
         
             ScrollView {
              
                 HStack {
-                    Image(business.image)
-                        .resizable()
-                        .scaledToFit()
+//                    let _=print(business.imageUrl ?? "Not found!!")
+                    AsyncImage(url: URL(string: business.imageUrl ?? ""))
                 }
                 HStack {
-                    Text(business.name)
-                        .font(.title)
+                    ActionButton(name: "CALL", image: "phone.circle", action: {print("call")})
+                    ActionButton(name: "DIRECTIONS", image: "arrowshape.turn.up.right.circle", action: {print("directions")})
+                    ActionButton(name: "SHARE", image: "square.and.arrow.up.circle", action: {print("share")})
+                    ActionButton(name: "WEBSITE", image: "globe.europe.africa", action: {Link(business.website ?? "", destination: URL(string: business.website ?? "")!)})
+                    
                 }
+
 //                    HStack {
 //                        Text("OVERVIEW")
 //                        Text("MENU")
 //                        Text("REVIEWS")
 //                        Text("PHOTOS")
 //                    }
-                HStack {
-                    ActionButton(name: "CALL", image: "phone.circle", action: {print("call")})
-                    ActionButton(name: "DIRECTIONS", image: "arrowshape.turn.up.right.circle", action: {print("directions")})
-                    ActionButton(name: "SHARE", image: "square.and.arrow.up.circle", action: {print("share")})
-                    ActionButton(name: "WEBSITE", image: "globe.europe.africa", action: {print("website")})
+
+               
                     
+                        VStack {
+                            Map(position: $position) {
+                                Annotation(business.name, coordinate: business.loc!) {
+                                    Image(systemName: "mappin.and.ellipse")
+                                        .font(.largeTitle)
+                                        .foregroundStyle(.red)
+                                        .imageScale(.large)
+                                        .symbolEffect(.pulse)
+                                    }
+                                }
+                            }
+                            .frame(width: 100, height: 100)
+                            .clipShape(.rect(cornerRadius: 15))
+                    
+                        
+                        VStack {
+                            Label(business.address, systemImage: "mappin.and.ellipse.circle")
+                                .font(.title3)
+                                .multilineTextAlignment(.center)
+                               
+                                
+                        }
+                    
+                VStack (alignment: .leading, spacing: 10){
+                    Label("Hours: ", systemImage: "clock")
+                        .font(.title2)
+                        .bold()
+                        ForEach(business.openingHours?.weekdayText ?? [], id: \.self ) { text in
+                                Text(text)
+                        }
                 }
-                VStack(alignment: .leading, spacing: 15.0) {
-                    Label(business.address, systemImage: "mappin.and.ellipse.circle")
-                        .font(.title2)
-                    Label("business.time", systemImage: "clock")
-                        .font(.title2)
+                .padding()
+                HStack {
                     Label(business.phoneNumber, systemImage: "phone")
                         .font(.title2)
+                      
                 }
             }.navigationTitle("Details")
     }
@@ -49,7 +81,14 @@ struct BusinessDetailView: View {
 
 
 #Preview {
-    BusinessDetailView(business: BusinessViewModel().bizs[3])
+    
+    NavigationStack {
+        BusinessDetailView(business: BusinessViewModel().bizs[3], position: .camera(
+            MapCamera(
+                centerCoordinate: BusinessViewModel().bizs[3].loc!,
+                distance: 2500
+            )))
+    }
 }
 
 struct ActionButton: View {
