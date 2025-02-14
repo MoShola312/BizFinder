@@ -1,0 +1,264 @@
+{
+  "results": [
+    {
+      "name": "Central Perk",
+      "place_id": "ChIJN1t_tDeuEmsRUsoyG83frY4",
+      "address": "199 Lafayette St, New York, NY 10012",
+      "rating": 4.5,
+      "image_url": "https://example.com/central-perk.jpg",
+      "geometry": {
+        "location": {
+          "latitude": 40.722,
+          "longitude": -73.997
+        }
+      },
+      "opening_hours": {
+        "open_now": true,
+        "periods": [
+          {
+            "open": {
+              "day": 0, // Sunday
+              "time": "0800"
+            },
+            "close": {
+              "day": 0,
+              "time": "2000"
+            }
+          }
+        ],
+        "weekday_text": [
+          "Monday: 7:00 AM – 9:00 PM",
+          "Tuesday: 7:00 AM – 9:00 PM",
+          "Wednesday: 7:00 AM – 9:00 PM",
+          "Thursday: 7:00 AM – 9:00 PM",
+          "Friday: 7:00 AM – 10:00 PM",
+          "Saturday: 8:00 AM – 10:00 PM",
+          "Sunday: 8:00 AM – 8:00 PM"
+        ]
+      }
+    },
+    {
+      "name": "The Cheesecake Factory",
+      "place_id": "ChIJN1t_tDeuEmsRUsoyG83frY5",
+      "address": "3645 S Las Vegas Blvd, Las Vegas, NV 89109",
+      "rating": 4.0,
+      "image_url": "https://example.com/cheesecake-factory.jpg",
+      "geometry": {
+        "location": {
+          "latitude": 36.109,
+          "longitude": -115.171
+        }
+      },
+      "opening_hours": {
+        "open_now": true,
+        "periods": [
+          {
+            "open": {
+              "day": 0, // Sunday
+              "time": "1000"
+            },
+            "close": {
+              "day": 0,
+              "time": "2200"
+            }
+          }
+        ],
+        "weekday_text": [
+          "Monday: 11:00 AM – 11:00 PM",
+          "Tuesday: 11:00 AM – 11:00 PM",
+          "Wednesday: 11:00 AM – 11:00 PM",
+          "Thursday: 11:00 AM – 11:00 PM",
+          "Friday: 11:00 AM – 12:00 AM",
+          "Saturday: 10:00 AM – 12:00 AM",
+          "Sunday: 10:00 AM – 10:00 PM"
+        ]
+      }
+    },
+    {
+      "name": "Pike Place Fish Market",
+      "place_id": "ChIJN1t_tDeuEmsRUsoyG83frY6",
+      "address": "86 Pike Pl, Seattle, WA 98101",
+      "rating": 4.7,
+      "image_url": "https://example.com/pike-place-fish.jpg",
+      "geometry": {
+        "location": {
+          "latitude": 47.609,
+          "longitude": -122.342
+        }
+      },
+      "opening_hours": {
+        "open_now": false,
+        "periods": [
+          {
+            "open": {
+              "day": 1, // Monday
+              "time": "0900"
+            },
+            "close": {
+              "day": 1,
+              "time": "1800"
+            }
+          }
+        ],
+        "weekday_text": [
+          "Monday: 9:00 AM – 6:00 PM",
+          "Tuesday: 9:00 AM – 6:00 PM",
+          "Wednesday: 9:00 AM – 6:00 PM",
+          "Thursday: 9:00 AM – 6:00 PM",
+          "Friday: 9:00 AM – 6:00 PM",
+          "Saturday: 9:00 AM – 6:00 PM",
+          "Sunday: Closed"
+        ]
+      }
+    },
+    {
+      "name": "The Varsity",
+      "place_id": "ChIJN1t_tDeuEmsRUsoyG83frY7",
+      "address": "61 North Ave NW, Atlanta, GA 30308",
+      "rating": 4.2,
+      "image_url": "https://example.com/the-varsity.jpg",
+      "geometry": {
+        "location": {
+          "latitude": 33.772,
+          "longitude": -84.388
+        }
+      },
+      "opening_hours": {
+        "open_now": true,
+        "periods": [
+          {
+            "open": {
+              "day": 0, // Sunday
+              "time": "1100"
+            },
+            "close": {
+              "day": 0,
+              "time": "2200"
+            }
+          }
+        ],
+        "weekday_text": [
+          "Monday: 10:00 AM – 11:00 PM",
+          "Tuesday: 10:00 AM – 11:00 PM",
+          "Wednesday: 10:00 AM – 11:00 PM",
+          "Thursday: 10:00 AM – 11:00 PM",
+          "Friday: 10:00 AM – 12:00 AM",
+          "Saturday: 10:00 AM – 12:00 AM",
+          "Sunday: 11:00 AM – 10:00 PM"
+        ]
+      }
+    },
+    {
+      "name": "Al's Italian Beef",
+      "place_id": "ChIJN1t_tDeuEmsRUsoyG83frY8",
+      "address": "1079 W Taylor St, Chicago, IL 60607",
+      "rating": 4.3,
+      "image_url": "https://example.com/als-italian-beef.jpg",
+      "geometry": {
+        "location": {
+          "latitude": 41.870,
+          "longitude": -87.652
+        }
+      },
+      "opening_hours": {
+        "open_now": true,
+        "periods": [
+          {
+            "open": {
+              "day": 0, // Sunday
+              "time": "0900"
+            },
+            "close": {
+              "day": 0,
+              "time": "2100"
+            }
+          }
+        ],
+        "weekday_text": [
+          "Monday: 9:00 AM – 9:00 PM",
+          "Tuesday: 9:00 AM – 9:00 PM",
+          "Wednesday: 9:00 AM – 9:00 PM",
+          "Thursday: 9:00 AM – 9:00 PM",
+          "Friday: 9:00 AM – 10:00 PM",
+          "Saturday: 9:00 AM – 10:00 PM",
+          "Sunday: 9:00 AM – 9:00 PM"
+        ]
+      }
+    },
+    {
+      "name": "In-N-Out Burger",
+      "place_id": "ChIJN1t_tDeuEmsRUsoyG83frY9",
+      "address": "7000 Sunset Blvd, Los Angeles, CA 90028",
+      "rating": 4.6,
+      "image_url": "https://example.com/in-n-out-burger.jpg",
+      "geometry": {
+        "location": {
+          "latitude": 34.098,
+          "longitude": -118.337
+        }
+      },
+      "opening_hours": {
+        "open_now": true,
+        "periods": [
+          {
+            "open": {
+              "day": 0, // Sunday
+              "time": "1030"
+            },
+            "close": {
+              "day": 0,
+              "time": "0100"
+            }
+          }
+        ],
+        "weekday_text": [
+          "Monday: 10:30 AM – 1:00 AM",
+          "Tuesday: 10:30 AM – 1:00 AM",
+          "Wednesday: 10:30 AM – 1:00 AM",
+          "Thursday: 10:30 AM – 1:00 AM",
+          "Friday: 10:30 AM – 1:30 AM",
+          "Saturday: 10:30 AM – 1:30 AM",
+          "Sunday: 10:30 AM – 1:00 AM"
+        ]
+      }
+    },
+    {
+      "name": "Blue Bottle Coffee",
+      "place_id": "ChIJN1t_tDeuEmsRUsoyG83frY10",
+      "address": "300 Webster St, Oakland, CA 94607",
+      "rating": 4.4,
+      "image_url": "https://example.com/blue-bottle-coffee.jpg",
+      "geometry": {
+        "location": {
+          "latitude": 37.804,
+          "longitude": -122.271
+        }
+      },
+      "opening_hours": {
+        "open_now": false,
+        "periods": [
+          {
+            "open": {
+              "day": 1, // Monday
+              "time": "0700"
+            },
+            "close": {
+              "day": 1,
+              "time": "1800"
+            }
+          }
+        ],
+        "weekday_text": [
+          "Monday: 7:00 AM – 6:00 PM",
+          "Tuesday: 7:00 AM – 6:00 PM",
+          "Wednesday: 7:00 AM – 6:00 PM",
+          "Thursday: 7:00 AM – 6:00 PM",
+          "Friday: 7:00 AM – 6:00 PM",
+          "Saturday: 8:00 AM – 5:00 PM",
+          "Sunday: 8:00 AM – 5:00 PM"
+        ]
+      }
+    }
+  ],
+  "status": "OK"
+}
