@@ -61,16 +61,11 @@ struct LocalBusinessView: View {
                                 HStack {
                                     Text(String(format: "%.1f", info.rating))
                                     Image(systemName: "star.fill")
-                                    //                                    Text(info.category)
                                     
-                                    //                                }
-                                    //                                HStack {
-                                    //                                    Text(info.address)
-                                    //                                }
-                                    //                                    HStack {
-                                    //
-                                    //                                        Text("\(info.website)")
-                                    //                                    }
+                                    Link(destination: URL(string: (info.website != nil ? info.website : "https://www.google.com/search?q=\(info.name)")!)!) {
+                                        Image(systemName: "google.fill")
+                                            .font(.title3)
+                                    }
                                     
                                 }
                                 HStack {

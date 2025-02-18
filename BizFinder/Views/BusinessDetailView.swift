@@ -12,6 +12,7 @@ struct BusinessDetailView: View {
     let business: Business
     
     @State var position: MapCameraPosition
+    @Environment(\.openURL) var openURL
     
     var body: some View {
         
@@ -25,7 +26,7 @@ struct BusinessDetailView: View {
                     ActionButton(name: "CALL", image: "phone.circle", action: {print("call")})
                     ActionButton(name: "DIRECTIONS", image: "arrowshape.turn.up.right.circle", action: {print("directions")})
                     ActionButton(name: "SHARE", image: "square.and.arrow.up.circle", action: {print("share")})
-                    ActionButton(name: "WEBSITE", image: "globe.europe.africa", action: {Link(business.website ?? "", destination: URL(string: business.website ?? "")!)})
+                    ActionButton(name: "WEBSITE", image: "globe.europe.africa.fill", action: {openURL(URL(string: ((business.website != nil) ? business.website : "https://www.google.com/search?q=\(business.name)")!)!)})
                     
                 }
 
