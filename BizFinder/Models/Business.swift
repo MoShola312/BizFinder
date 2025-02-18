@@ -15,7 +15,7 @@ struct Business: Codable, Identifiable {
     var placeId: String
     var address: String
     var rating: Double
-    var phoneNumber: String
+    var phoneNumber: String?
     var imageUrl: String?
     let geometry: Geometry
     

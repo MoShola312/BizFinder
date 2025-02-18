@@ -80,10 +80,10 @@ struct LocalBusinessView: View {
                                 }
                                 
                             }
-                            VStack (alignment: .trailing) {
-                                Image(systemName: "phone.fill")
-                                Text("CALL")
-                            }
+//                            VStack (alignment: .trailing) {
+//                                Image(systemName: "phone.fill")
+//                                Text("CALL")
+//                            }
                         }
                     }
                 }

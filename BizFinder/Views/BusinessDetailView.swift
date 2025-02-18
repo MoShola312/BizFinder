@@ -20,15 +20,28 @@ struct BusinessDetailView: View {
              
                 HStack {
 //                    let _=print(business.imageUrl ?? "Not found!!")
-                    AsyncImage(url: URL(string: business.imageUrl ?? ""))
+                    AsyncImage(url: URL(string: business.imageUrl ?? "")) { image in
+                        image
+                            .resizable()
+                            .aspectRatio(contentMode: .fit)
+                    } placeholder: {
+                        ProgressView()
+                    }
+                    .frame(height: 250)
                 }
                 HStack {
-                    ActionButton(name: "CALL", image: "phone.circle", action: {print("call")})
+                    ActionButton(name: "CALL", image: "phone.circle", action: {
+                        openURL(URL(string: "tel://\(business.phoneNumber ?? "0000000000")")!)
+                    })
+                    Spacer()
                     ActionButton(name: "DIRECTIONS", image: "arrowshape.turn.up.right.circle", action: {print("directions")})
+                    Spacer()
                     ActionButton(name: "SHARE", image: "square.and.arrow.up.circle", action: {print("share")})
-                    ActionButton(name: "WEBSITE", image: "globe.europe.africa.fill", action: {openURL(URL(string: ((business.website != nil) ? business.website : "https://www.google.com/search?q=\(business.name)")!)!)})
-                    
-                }
+                    Spacer()
+                    ActionButton(name: "WEBSITE", image: "globe.europe.africa.fill", action: {
+                        openURL(URL(string: business.website ?? "https://www.google.com/search?q=\(business.name)")!)
+                    })
+                }.padding(.horizontal, 16)
 
 //                    HStack {
 //                        Text("OVERVIEW")
@@ -36,47 +49,38 @@ struct BusinessDetailView: View {
 //                        Text("REVIEWS")
 //                        Text("PHOTOS")
 //                    }
-
-               
                     
-                        VStack {
-                            Map(position: $position) {
-                                Annotation(business.name, coordinate: business.loc!) {
-                                    Image(systemName: "mappin.and.ellipse")
-                                        .font(.largeTitle)
-                                        .foregroundStyle(.red)
-                                        .imageScale(.large)
-                                        .symbolEffect(.pulse)
-                                    }
-                                }
-                            }
-                            .frame(width: 100, height: 100)
-                            .clipShape(.rect(cornerRadius: 15))
-                    
-                        
-                        VStack {
-                            Label(business.address, systemImage: "mappin.and.ellipse.circle")
-                                .font(.title3)
-                                .multilineTextAlignment(.center)
-                               
-                                
-                        }
-                    
-                VStack (alignment: .leading, spacing: 10){
-                    Label("Hours: ", systemImage: "clock")
-                        .font(.title2)
-                        .bold()
-                        ForEach(business.openingHours?.weekdayText ?? [], id: \.self ) { text in
-                                Text(text)
-                        }
+                
+                Map(position: $position) {
+                    Annotation(business.name, coordinate: business.loc!) {
+                        Image(systemName: "mappin.and.ellipse")
+                            .font(.largeTitle)
+                            .foregroundStyle(.red)
+                            .imageScale(.large)
+                            .symbolEffect(.pulse)
+                    }
                 }
-                .padding()
-                HStack {
-                    Label(business.phoneNumber, systemImage: "phone")
-                        .font(.title2)
-                      
-                }
+                .frame(width: .infinity, height: 150)
+                .clipShape(.rect(cornerRadius: 15))
+                .padding(.horizontal, 16)
+                  
+                Label(business.address, systemImage: "mappin.and.ellipse.circle")
+                    .font(.title3)
+                    .multilineTextAlignment(.center)
+                
+                openHoursView
+                    .multilineTextAlignment(.leading)
+           
             }.navigationTitle("Details")
+    }
+    
+    @ViewBuilder
+    var openHoursView: some View {
+        Label("Hours: ", systemImage: "clock")
+            .font(.title2)
+        ForEach(business.openingHours?.weekdayText ?? [], id: \.self ) { text in
+                Text(text)
+        }
     }
 }
 
@@ -103,11 +107,10 @@ struct ActionButton: View {
                 action()
             } label: {
                 Image(systemName: image)
-                    .resizable()
+                    .font(.largeTitle)
+                    .fontWeight(.regular)
                     .scaledToFit()
-                    .frame(width: 50)
                     .foregroundColor(.black)
-                    .frame(width: 70, height: 70)
             }
             Text(name)
                 .font(.caption)
