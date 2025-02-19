@@ -58,9 +58,12 @@ struct LocalBusinessView: View {
                                         .font(.title3)
                                         .bold()
                                 }
+                                .padding(.top,16)
+                                
                                 HStack {
                                     Text(String(format: "%.1f", info.rating))
                                     Image(systemName: "star.fill")
+                                        .foregroundStyle(.yellow)
                                     
                                     Link(destination: URL(string: (info.website != nil ? info.website : "https://www.google.com/search?q=\(info.name)")!)!) {
                                         Image(systemName: "google.fill")
@@ -73,11 +76,12 @@ struct LocalBusinessView: View {
                                         .foregroundStyle(.green) : Text("Closed")
                                         .foregroundStyle(.red)
                                 }
-                                Spacer()
+                                .padding(.bottom,8)
                                 
                                 HStack {
                                     Text(info.address)
                                 }
+                                .padding(.bottom,8)
                                 
                             }
 //                            VStack (alignment: .trailing) {

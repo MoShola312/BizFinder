@@ -66,20 +66,28 @@ struct BusinessDetailView: View {
                   
                 Label(business.address, systemImage: "mappin.and.ellipse.circle")
                     .font(.title3)
-                    .multilineTextAlignment(.center)
+                    .padding()
+                    
                 
                 openHoursView
                     .multilineTextAlignment(.leading)
+                    
            
             }.navigationTitle("Details")
     }
     
     @ViewBuilder
     var openHoursView: some View {
-        Label("Hours: ", systemImage: "clock")
-            .font(.title2)
-        ForEach(business.openingHours?.weekdayText ?? [], id: \.self ) { text in
-                Text(text)
+        HStack {
+            VStack(alignment: .listRowSeparatorLeading){
+                Label("Hours: ", systemImage: "clock")
+                    .font(.title2)
+                    .padding(.top, 10)
+                ForEach(business.openingHours?.weekdayText ?? [], id: \.self ) { daysHours in
+                    Text(daysHours)
+                }
+            }.padding(.horizontal, 16)
+            Spacer()
         }
     }
 }
