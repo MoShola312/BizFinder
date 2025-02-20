@@ -25,31 +25,34 @@ struct BusinessDetailView: View {
                             .resizable()
                             .aspectRatio(contentMode: .fit)
                     } placeholder: {
-                        ProgressView()
+//                        ProgressView()
+                        Image(systemName: "photo.badge.exclamationmark")
+                            .font(.largeTitle)
                     }
                     .frame(height: 250)
                 }
+                
                 HStack {
                     ActionButton(name: "CALL", image: "phone.circle", action: {
                         openURL(URL(string: "tel://\(business.phoneNumber ?? "0000000000")")!)
                     })
                     Spacer()
+                    
                     ActionButton(name: "DIRECTIONS", image: "arrowshape.turn.up.right.circle", action: {print("directions")})
+                    
                     Spacer()
-                    ActionButton(name: "SHARE", image: "square.and.arrow.up.circle", action: {print("share")})
+                    
+                    ActionButton(name: "SHARE", image: "square.and.arrow.up.circle", action: {
+                        share()
+                    })
+                    
                     Spacer()
+                    
                     ActionButton(name: "WEBSITE", image: "globe.europe.africa.fill", action: {
                         openURL(URL(string: business.website ?? "https://www.google.com/search?q=\(business.name)")!)
                     })
-                }.padding(.horizontal, 16)
-
-//                    HStack {
-//                        Text("OVERVIEW")
-//                        Text("MENU")
-//                        Text("REVIEWS")
-//                        Text("PHOTOS")
-//                    }
-                    
+                }
+                .padding(.horizontal, 16)
                 
                 Map(position: $position) {
                     Annotation(business.name, coordinate: business.loc!) {
@@ -59,22 +62,32 @@ struct BusinessDetailView: View {
                             .imageScale(.large)
                             .symbolEffect(.pulse)
                     }
-                }
-                .frame(width: .infinity, height: 150)
+                }.frame(width: .infinity, height: 150)
                 .clipShape(.rect(cornerRadius: 15))
                 .padding(.horizontal, 16)
                   
                 Label(business.address, systemImage: "mappin.and.ellipse.circle")
                     .font(.title3)
                     .padding()
-                    
                 
+                ratingsView
                 openHoursView
-                    .multilineTextAlignment(.leading)
-                    
            
-            }.navigationTitle("Details")
+            }.navigationTitle("\(business.name)")
     }
+    
+    
+    func share() {
+        let url = URL(string: "https://www.google.com/search?q=\(business.name)")!
+        let name = "\(business.name)"
+        
+        
+         let activityVC = UIActivityViewController(activityItems: [name, url], applicationActivities: nil)
+         if let scene = UIApplication.shared.connectedScenes.first as? UIWindowScene {
+             scene.windows.first?.rootViewController?.present(activityVC, animated: true, completion: nil)
+         }
+     }
+    
     
     @ViewBuilder
     var openHoursView: some View {
@@ -89,6 +102,19 @@ struct BusinessDetailView: View {
             }.padding(.horizontal, 16)
             Spacer()
         }
+    }
+    
+    @ViewBuilder
+    var ratingsView: some View {
+        HStack {
+            Image(systemName: "star.fill")
+                .foregroundStyle(.yellow)
+                .font(.title3)
+            Text(String(format: "%.1f", business.rating))
+                .font(.title3)
+            
+            Spacer()
+        }.padding(.horizontal, 16)
     }
 }
 
@@ -126,3 +152,5 @@ struct ActionButton: View {
             
     }
 }
+
+
